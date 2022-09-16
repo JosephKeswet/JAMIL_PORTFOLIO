@@ -4,6 +4,14 @@ import Jamil2 from '../Assets/img/Jamil/Rectangle 39.svg'
 import mini1 from '../Assets/img/projects/Frame 12.svg'
 import mini2 from '../Assets/img/projects/Frame 13.svg'
 import mini3 from '../Assets/img/projects/Frame 14.svg'
+import InnyBlog from '../Assets/img/projects/Landing Page.svg'
+import SelfHelp from '../Assets/img/projects/Self-help.svg'
+import Kechi from '../Assets/img/projects/Kechi.svg'
+import Reef from '../Assets/img/projects/Reef.svg'
+import ReefHomepage from '../Assets/img/projects/ReefHomepage.svg'
+
+
+
 import Image from 'next/image'
 import MiniProjectCard from "../components/MiniProjectCard";
 
@@ -90,7 +98,78 @@ export default function Home() {
       </main>
       <hr />
     </section>
-    <h1>Hey</h1>
+   
+   {/* Other projects section */}
+   <section>
+    <main className=" ml-9 mt-[89px]">
+      <div className="flex justify-between">
+        <h3 className="w-[244px] h-[29px]text-[#0B0B0B] text-[24px] leading-[29px] font-medium">/Other projects</h3>
+        <h3 className="w-[179px] h-[54px] text-[#0B0B0B] text-[40px] leading-[54px] font-normal underline underline-offset-8 ">View all</h3>
+      </div>
+
+        <div className="flex justify-between ml-[30px] mt-[64px]">
+          <div>
+          <h1 className="text-[#171717] text-[48px] leading-[65px] font-normal w-[513px] h-[65px]">Innysblog</h1>
+          <Image src={InnyBlog} width={700} height={1763} alt="Image of Jamil"   />
+          </div>
+
+          <div>
+          <h1 className="text-[#171717] text-[48px] leading-[65px] font-normal  w-[300px] h-[65px]">Self Help</h1>
+          <Image src={SelfHelp} width={700} height={1410} alt="Image of Jamil"   />
+          </div>
+        </div>
+
+
+        <div className="flex  ml-[10px] mt-[64px]">
+          <div className="mr-[500px]">
+          <h1 className="text-[#171717] text-[48px] leading-[65px] font-normal w-[513px] h-[65px] mb-14">Kechi’s</h1>
+          <Image src={Kechi} width={750} height={2483} alt="Image of Jamil"   />
+          </div>
+
+          <div className="flex flex-col w-[1200px]  ">
+          <h1 className="text-[#171717] text-[48px] leading-[65px] font-normal text-center w-[200px] h-[65px] mb-14">Reef</h1>
+          <div className="mb-8">
+            <Image src={Reef} width={393} height={651} alt="Image of Jamil"   />
+            </div>
+            <div>
+          <Image src={ReefHomepage} width={393} height={650} alt="Image of Jamil"   />
+          </div>
+          </div>
+        </div>
+    </main>
+    <hr />
+   </section>
+
+   {/* Skillset section */}
+   <section>
+    <main className="flex ml-9 mt-24 h-[440px] items-start">
+    <h3 className="w-[244px] h-[29px]text-[#0B0B0B] text-[24px] mr-28 leading-[29px] font-medium">/SKILLSETS</h3>
+    <div className="flex gap-40 items-center" >
+      <h1 className="w-[800px] h-[225px] text-[48px] text-left text-[#0B0B0B] leading-[75px] font-medium">ELITE ENTREPRENEURS NETWORK, LUSTRE MEDIA CONGLOMERATE, MYLLASH MEDIA</h1>
+      <div className="w-[190px] h-[190px] space-y-14">
+          <p className="text-[24px] text-[#0B0B0B] text-right leading-[29px] font-medium">2021 - 2022</p>
+          <p className="text-[24px] text-[#0B0B0B] text-right leading-[29px] font-medium">2021 - 2022</p>
+          <p className="text-[24px] text-[#0B0B0B] text-right leading-[29px] font-medium">2021 - PRESENT</p>
+      </div>
+    </div>
+    </main>
+    <hr />
+   </section>
+
+    {/* Contact me section */}
+    <section>
+      <main className="flex gap-24 items-start h-[428px] ml-9 mt-[97px]">
+      <h3 className="w-[244px] h-[29px]text-[#0B0B0B] text-[24px] leading-[29px] font-medium">/CONTACT ME</h3>
+      <h1 className="text-[48px] text-[#0B0B0B] leading-[75px] font-medium w-[1047px] h-[75px] ">NATHANUMARJAMIL@GMAIL.COM</h1>
+      </main>
+      <hr />
+      <div className="h-[150px]">
+        <hr />
+      </div>
+      <div className="mb-[129px]">
+        <hr />
+      </div>
+    </section>
 
     
 

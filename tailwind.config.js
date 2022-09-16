@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      Cinzel:['Cinzel', 'serif'],
+      Montserrat:['Montserrat', "sans-serif"]
+  }
   },
   plugins: [],
 }
