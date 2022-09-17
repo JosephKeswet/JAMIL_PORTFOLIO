@@ -13,9 +13,9 @@ const MiniProjectCard = ({img,myText}) => {
             </div>
             <div>
                 <div className='mb-7'>
-                <Image src={img} width={400} height={350} alt="Project Design"  />
+                <Image src={img} width={400} height={350} alt="Project Dunderline underline-offset-8 esign"  />
                 </div>
-                <h1 className='w-[385px] h-[98px] text-[40px] text-[#171717] font-normal leading-[49px] underline underline-offset-8 '>{myText}</h1>
+                <h1 className='w-[385px] h-[98px] text-[40px] text-[#171717] font-normal leading-[49px] '>{myText}</h1>
             </div>
         </main>
     </div>
