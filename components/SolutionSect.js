@@ -3,7 +3,7 @@ import React from 'react'
 import Loho from '../Assets/img/single/Loho.svg'
 
 
-const SolutionSect = ({img1,img2,paddingTop,text1,text2,header}) => {
+const SolutionSect = ({img1,img2,paddingTop,text1,text2,header,imgWidth,imgHeight}) => {
   return (
     <div className='mx-[60px] mt-[120px]'>
         <main className='flex justify-between h-[529px]'>
@@ -19,8 +19,8 @@ const SolutionSect = ({img1,img2,paddingTop,text1,text2,header}) => {
             </div>
         </main>
         <div className='flex justify-center gap-40'>
-            <Image src={img1} width={463} height={812} alt="Loho wireframe "   />
-            <Image src={img2} width={463} height={812} alt="Loho wireframe "   />
+            <Image src={img1} width={imgWidth} height={imgHeight} alt="Solution design "   />
+            <Image src={img2} width={imgWidth} height={imgHeight} alt="SOlution design "   />
         </div>
     </div>
   )

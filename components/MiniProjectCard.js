@@ -8,14 +8,14 @@ const MiniProjectCard = ({img,myText}) => {
     <div>
         <main className='flex items-end  gap-[41px] mb-6 '>
             <div className='flex items-center gap-[10px] w-[159px] h-[58px]'>
-                <p className='w-[121px] h-[58px] text-2xl text-[#0B0B0B] leading-7 font-medium text-right'>Click here to view.</p>
+                <p className='w-[121px] h-[58px] text-2xl text-[#0B0B0B] leading-7 font-medium text-right font-Montserrat'>Click here to view.</p>
                 <FontAwesomeIcon icon={faArrowRight} className='w-5 h-7'/>
             </div>
             <div>
                 <div className='mb-7'>
                 <Image src={img} width={400} height={350} alt="Project Dunderline underline-offset-8 esign"  />
                 </div>
-                <h1 className='w-[385px] h-[98px] text-[40px] text-[#171717] font-normal leading-[49px] '>{myText}</h1>
+                <h1 className='w-[385px] h-[98px] text-[38px] text-[#171717] font-normal leading-[49px] font-Montserrat underline underline-offset-8 '>{myText}</h1>
             </div>
         </main>
     </div>

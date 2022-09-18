@@ -4,15 +4,31 @@ import SingleProject from '../components/SingleProject'
 import Loho from '../Assets/img/single/Loho.svg'
 import LohoFlow from '../Assets/img/flowcharts/LohoFlow.svg'
 import LohoWire1 from '../Assets/img/wireframes/LohoWire1.svg'
+import PopularWire from '../Assets/img/wireframes/Popular fits.png'
+import NativeWire from '../Assets/img/wireframes/Native.png'
+import TailorWire from '../Assets/img/wireframes/Tailor (1).png'
+import OrdersWire from '../Assets/img/wireframes/Current orders.png'
+import SearchWire from '../Assets/img/wireframes/Image search.png'
+import ProfileWire from '../Assets/img/wireframes/Profile.png'
+import ChatsWire from '../Assets/img/wireframes/Chats.png'
+import Tailor from '../Assets/img/projects/Tailor (1).png'
+import Native from '../Assets/img/projects/Native.png'
+import Popular from '../Assets/img/projects/Popular fits (1).png'
+import Orders from '../Assets/img/projects/Current orders (1).png'
+import Search from '../Assets/img/projects/Image search (1).png'
+import Profile from '../Assets/img/projects/Profile (1).png'
+import Chats from '../Assets/img/projects/Chats (1).png'
+import HomePage from '../Assets/img/projects/Homepage (2).png'
 import Image from 'next/image'
 import SolutionSect from '../components/SolutionSect'
 import Solution1 from '../components/Solution1'
+import SmallNav from '../components/SmallNav'
 
 
 const Project = () => {
   return (
     <div>
-        <Nav/>
+        <SmallNav />
         <hr />
         <SingleProject 
         title="Loho"
@@ -34,35 +50,53 @@ const Project = () => {
           <h1 className='text-[48px] text-[#2D2D2D] leading-[59px] font-medium font-Montserrat mb-[100px]'>WIREFRAMES</h1>
           <div className='flex flex-wrap gap-20 w-[1400px]'>
           <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
-          <Image src={LohoWire1} width={375} height={812} alt="Loho wireframe "   />
+          <Image src={TailorWire} width={375} height={812} alt="Loho wireframe "   />
+          <Image src={NativeWire} width={375} height={812} alt="Loho wireframe "   />
+          <Image src={PopularWire} width={375} height={812} alt="Loho wireframe "   />
+          <Image src={OrdersWire} width={375} height={812} alt="Loho wireframe "   />
+          <Image src={SearchWire} width={375} height={812} alt="Loho wireframe "   />
+          </div>
+          <div className='flex justify-center gap-20 mt-20'>
+          <Image src={ProfileWire} width={375} height={812} alt="Loho wireframe "   />
+          <Image src={ChatsWire} width={375} height={812} alt="Loho wireframe "   />
           </div>
         </main>
 
         <SolutionSect 
-        img={Loho} 
+        img1={HomePage}
+        img2={Tailor}
+        imgWidth='461'
+        imgHeight='812' 
         paddingTop='pt-32'
         text1='The home screen displays the most popular tailors, most popular fits, and categories which allows the user to access a variety of styles. Users have access to a search bar also at top of the screen.'
         text2='The tailor’s profile screen displays a clear photo of the tailor, their bio and their rating at the top half of the screen. At the buttom half of the screen, the tailors most popular fits are shown alongside their catalogue for the user to make a selection from. Lastly, the screen provides a chat buttton for easy communication with the tailor.'
         header="TAILOR'S PROFILE"
         />
-        <Solution1 img={Loho} header1="FITS INFORMATION" header2="POPULAR FITS" text1="This screen has every information the user would need to know about the fit or style before the user order, starting from the image at the top half.  This screen includes suggestions of similar style."
+        <Solution1 
+        img1={Native}
+        img2={Popular}
+        imgWidth='461'
+        imgHeight='812'
+        header1="FITS INFORMATION" 
+        header2="POPULAR FITS" 
+        text1="This screen has every information the user would need to know about the fit or style before the user order, starting from the image at the top half.  This screen includes suggestions of similar style."
         text2="This screen opens up from the home page containing the full catalogue of popular fits and styles."
         />
         <Solution1
-        img={Loho}
+        img1={Orders}
+        img2={Search}
+        imgWidth='461'
+        imgHeight='812'
         header1='RUNNING ORDER'
         header2='IMAGE SEARCH'
         text1='The running order screen contains the basic information of each order the user has placed. Each card contains the image of the style, a brief description of the style, the duration of running order and the tailor woring on the order.'
         text2='The image search screen is a unique feature of the app. This screen contains the option for the user to either attach or take an image of what ever style or fit they would like made for them. This is matched with the tailor that best suites the style.'
         />
         <Solution1 
-        img={Loho}
+        img1={Profile}
+        img2={Chats}
+        imgWidth='461'
+        imgHeight='812'
         header1='PROFILE'
         header2='CHATS'
         text1='Like most apps, the profile screen is quite important. This contains the basic details of the user including the user’s identification number. This page also contains access to settings for te app.'

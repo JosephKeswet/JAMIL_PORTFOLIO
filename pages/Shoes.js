@@ -8,14 +8,27 @@ import TopDeals from '../Assets/img/single/TopDeals.png'
 import Login from '../Assets/img/single/Login.png'
 import ShoeFlow from '../Assets/img/flowcharts/ShoeFlow.png'
 import ShoeWire1 from '../Assets/img/wireframes/ShoeWire1.svg'
+import Shoe1 from '../Assets/img/wireframes/Home3.png'
+import Shoe2 from '../Assets/img/wireframes/Item 2.png'
+import Shoe3 from '../Assets/img/wireframes/Your Cart 1.png'
+import Shoe4 from '../Assets/img/wireframes/Item 3.png'
+import Shoe5 from '../Assets/img/wireframes/Account 1.png'
+import Shoe6 from '../Assets/img/wireframes/Home 4.png'
+import Shoe7 from '../Assets/img/wireframes/Home 5.png'
+import Shoe8 from '../Assets/img/wireframes/Home 6.png'
+
+
+
 import Nav from '../components/Nav'
 import SolutionSect from '../components/SolutionSect'
 import Solution1 from '../components/Solution1'
+import Image from 'next/image'
+import SmallNav from '../components/SmallNav'
 
 const Shoes = () => {
   return (
     <div>
-        <Nav/>
+        <SmallNav />
         <hr />
         <SingleProject 
         title="Shoes & Shoes"
@@ -38,12 +51,32 @@ const Shoes = () => {
         />
 
         {/* Wireframe section should go here */}
+        <section>
+        <main className='mx-[60px] '>
+          <h1 className='text-[48px] text-[#2D2D2D] leading-[59px] font-medium font-Montserrat mb-[100px]'>WIREFRAMES</h1>
+          <div className='flex flex-wrap gap-10'>
+          <Image src={Shoe1} width={420} height={300} alt="Shoe wireframe "   />
+          <Image src={Shoe2} width={420} height={300} alt="Shoe wireframe "   />
+          <Image src={Shoe3} width={420} height={300} alt="Shoe wireframe "   />
+          <Image src={Shoe4} width={420} height={300} alt="Shoe wireframe "   />
+          <Image src={Shoe5} width={420} height={300} alt="Shoe wireframe "   />
+          <Image src={Shoe6} width={420} height={300} alt="Shoe wireframe "   />
+          </div>
+          <div className='flex justify-center gap-10 mt-10'>
+          <Image src={Shoe7} width={420} height={300} alt="Shoe wireframe "   />
+          <Image src={Shoe8} width={420} height={300} alt="Shoe wireframe "   />
+          </div>
+
+          </main>
+        </section>
 
 
         {/* Solution section */}
         <SolutionSect 
         img1={Shoe}
         img2={ShoePage}
+        imgWidth='461'
+        imgHeight='812' 
         paddingTop='pt-32'
         text1='The home screen displays the best deals and categories which allows the user to access a variety of shoes. Users have access to a search bar also at top of the screen.'
         text2='The shoe screen displays a clear photos of the shoe, their name, type, and their rating. The number of shoes left in stock is shown alongside its price and buttons to allow the user to make a selection from. Lastly, the screen provides other suggestions similar to the shoe on display.'

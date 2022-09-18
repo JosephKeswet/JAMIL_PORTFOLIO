@@ -6,6 +6,13 @@ const nextConfig = {
 
 module.exports = nextConfig
 
+module.exports = {
+  images: {
+    disableStaticImages: true,
+  },
+}
+
+
 // next.config.js
 // const withImages = require('next-images')
 // module.exports = withImages()
