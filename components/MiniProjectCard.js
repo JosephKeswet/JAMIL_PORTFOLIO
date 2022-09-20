@@ -1,9 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import React from 'react'
+import Link from 'next/link'
 
-const MiniProjectCard = ({img,myText}) => {
+const MiniProjectCard = ({img,myText,route}) => {
   return (
     <div>
         <main className='flex items-end  gap-[41px] mb-6 '>
@@ -12,10 +14,31 @@ const MiniProjectCard = ({img,myText}) => {
                 <FontAwesomeIcon icon={faArrowRight} className='w-5 h-7'/>
             </div>
             <div>
-                <div className='mb-7'>
+            <Link href={route}>
+                <motion.div 
+                  whileHover={{
+                    scale: 1.05,
+                    transition: {
+                      duration: .2
+                    }
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                className='mb-7 cursor-pointer'>
                 <Image src={img} width={400} height={350} alt="Project Dunderline underline-offset-8 esign"  />
-                </div>
-                <h1 className='w-[385px] h-[98px] text-[38px] text-[#171717] font-normal leading-[49px] font-Montserrat underline underline-offset-8 '>{myText}</h1>
+                </motion.div>
+                </Link>
+
+                <Link href={route}>
+                <motion.h1 
+                  whileHover={{
+                    scale: 1.05,
+                    transition: {
+                      duration: .2
+                    }
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                className='w-[385px] h-[98px] text-[38px] text-[#171717] font-normal leading-[49px] font-Montserrat underline underline-offset-8 cursor-pointer'>{myText}</motion.h1>
+                </Link>
             </div>
         </main>
     </div>

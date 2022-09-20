@@ -18,6 +18,8 @@ import Profile from '../Assets/img/single/ProfileRahisi.png'
 import Accoms from '../Assets/img/single/AcommodationRahisi.png'
 import Booking from '../Assets/img/single/BookingRahisi.png'
 import Saved from '../Assets/img/single/BookmarksRahisi.png'
+import {motion} from 'framer-motion'
+
 
 
 
@@ -28,12 +30,34 @@ import Image from 'next/image'
 import Solution1 from '../components/Solution1'
 import SolutionSect from '../components/SolutionSect'
 import SmallNav from '../components/SmallNav'
+import Link from 'next/link'
 
 const Rahisi = () => {
   return (
-    <div>
-        <SmallNav />
+    <motion.div
+    exit={{
+      opacity: 0
+    }}
+    >
+        <SmallNav route='/#projects' />
         <hr />
+        <motion.div
+             initial='hidden' animate='visible'
+             variants={{
+               hidden: {
+                 scale: .8,
+                 opacity: 0
+               },
+               visible: {
+                 scale: 1,
+                 opacity: 1,
+                 transition: {
+                   delay: 1
+                 }
+               },
+             }}
+             className="mt-[150px] overflow-hidden"
+        >
         <SingleProject
                 title="Rahisi"
                 img={RahisiHome} marginPro="mt-0" 
@@ -70,7 +94,7 @@ const Rahisi = () => {
           <h1 className='text-[48px] text-[#2D2D2D] leading-[59px] font-medium font-Montserrat mb-[30px]'>MID FIDELITYWIREFRAME</h1>
           <p className='text-[#0B0B0B] text-[23px] leading-[29px]  font-light'>During the mid-fidelity wireframe stage, I made slight changes to the initial designs.</p>
 
-          <div className='flex flex-wrap  gap-20'>
+          <div className='flex flex-wrap mt-20  gap-20'>
             <Image src={Mid1} width={375} height={812}/>
             <Image src={Mid2} width={375} height={812}/>
             <Image src={Mid3} width={375} height={812}/>
@@ -132,12 +156,14 @@ const Rahisi = () => {
       </section>
     {/*Links to other projects  */}
       <div className='flex justify-center items-center h-[187px] mb-36'>
-        <h1 className='text-[#0B0B0B] text-[30px] leading-[37px] font-Montserrat font-medium underline underline-offset-2'>VIEW OTHER PROJECTS</h1>
+        <Link href='/#otherprojects'>
+        <h1 className='text-[#0B0B0B] text-[30px] leading-[37px] font-Montserrat font-medium underline underline-offset-2 cursor-pointer'>VIEW OTHER PROJECTS</h1>
+        </Link>
       </div>
       
 
-
-    </div>
+    </motion.div>
+    </motion.div>
   )
 }
 

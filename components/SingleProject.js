@@ -3,7 +3,7 @@ import React from 'react'
 import LohoFlow from '../Assets/img/flowcharts/LohoFlow.svg'
 import LohoWire1 from '../Assets/img/wireframes/LohoWire1.svg'
 
-const SingleProject = ({title,summary,img,marginPro,marginBottomPro,problem1,problem2,project1,project2,project3,outcome, projectDur,gapPro,widthPro,flowChart,wire1,wireWidth,wireHeight}) => {
+const SingleProject = ({title,summary,img,marginPro,marginBottomPro,problem1,problem2,project1,project2,project3,outcome, projectDur,gapPro,widthPro,flowChart}) => {
   return (
     <div className='mx-[60px]'>
         <main >

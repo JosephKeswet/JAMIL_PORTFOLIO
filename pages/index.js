@@ -1,6 +1,6 @@
 import Nav from "../components/Nav";
-import Jamil1 from '../Assets/img/Jamil/Rectangle 38.svg'
-import Jamil2 from '../Assets/img/Jamil/Rectangle 39.svg'
+import Jamil1 from '../Assets/img/Jamil/Rectangle 38.png'
+import Jamil2 from '../Assets/img/Jamil/Rectangle 39.png'
 import mini1 from '../Assets/img/projects/Frame 12.svg'
 import mini2 from '../Assets/img/projects/Frame 13.svg'
 import mini3 from '../Assets/img/projects/Frame 14.svg'
@@ -11,26 +11,106 @@ import Reef from '../Assets/img/projects/Reef.svg'
 import ReefHomepage from '../Assets/img/projects/ReefHomepage.svg'
 import Image from 'next/image'
 import MiniProjectCard from "../components/MiniProjectCard";
+import {motion} from 'framer-motion'
+import { useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Home() {
+  const ref = useRef(null);
+  const downref = useRef(null);
+  const upref = useRef(null);
+
+  const [scroll,setScroll] = useState(true)
+
+
+
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+    console.log("I ran")
+  };
+
+  const handleScroll = () => {
+    if (scroll) {
+      downref.current?.scrollIntoView({behavior: 'smooth'});
+      console.log("I ran")
+      setScroll(false)
+    }
+    else{
+      upref.current?.scrollIntoView({behavior: 'smooth'});
+      console.log("I ran")
+      setScroll(true)
+    }
+
+  };
   return (
     <div >
-     <Nav/>
+     <div ref={upref}/>
+     <Nav scrollFunc={handleClick} />
+     <FontAwesomeIcon icon={scroll ? faArrowDown : faArrowUp} onClick={handleScroll} className='fixed w-20 h-20 left-[1400px] cursor-pointer top-[650px] z-50'/>
      {/* This is for the header name */}
      <hr />
-     <div className="flex justify-center items-center w-[1500px] h-[300px]">
+     <motion.div 
+          initial={{
+            x:-500,
+            opacity:0,
+            scale:0.5
+          }}
+          animate={{
+            x:0,
+            opacity:1,
+            scale:1
+          }}
+          transition={{
+            duration: 1.1
+          }}
+     className="flex justify-center items-center w-[1500px] h-[300px] overflow-hidden"
+     >
       <h1 className=" text-[190px] font-normal leading-[312px] mx-6 font-Cinzel ">JAMIL NATHAN</h1>
-     </div>
+     </motion.div>
      <hr />
 {/* This is the header for portfolio */}
-     <div className="flex justify-center items-center h-[285px]">
+     <motion.div
+          initial={{
+            x:500,
+            opacity:0,
+            scale:0.5
+          }}
+          animate={{
+            x:0,
+            opacity:1,
+            scale:1
+          }}
+          transition={{
+            duration: 1.1
+          }}
+     className="flex justify-center items-center h-[285px] overflow-hidden">
         <h1 className=" text-[190px] leading-[312px] font-Cinzel">* PORTFOLIO *</h1>
-     </div>
+     </motion.div>
      <hr />
 
     {/* This is the about section */}
     <section>
-      <main className="flex gap-[300px] ml-9 mt-24">
+      <motion.div 
+             initial={{
+              y:-700,
+              opacity:0,
+              scale:0.5
+            }}
+            whileInView={{
+              y:0,
+              opacity:1,
+              scale:1
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{once:true}}
+
+      
+      className="flex gap-[300px] ml-9 mt-28 overflow-hidden">
 
         <h3 className="text-[#0B0B0B] text-[24px] leading-[29px] font-Montserrat">/ABOUT</h3>
         <div>
@@ -52,13 +132,28 @@ export default function Home() {
         </main>
 
         </div>
-      </main>
+      </motion.div>
       <hr />
     </section>
     
     {/* Skillsets section */}
     <section>
-      <main className="mt-[97px] mb-24 flex gap-36 ml-9">
+      <motion.div 
+        initial={{
+          y:-500,
+          opacity:0,
+          scale:0.5
+        }}
+        whileInView={{
+          y:0,
+          opacity:1,
+          scale:1
+        }}
+        transition={{
+          duration: 1.2
+        }}
+        viewport={{once:true}}
+      className="mt-[97px] mb-24 flex gap-36 ml-9 overflow-hidden">
         <h3 className="text-[#0B0B0B] text-[24px] leading-[29px] font-Montserrat">/SKILLSETS</h3>
 
         <div className="w-[1200px]  h-[852px] mr-32 ">
@@ -71,38 +166,57 @@ export default function Home() {
             <h1 className="text-5xl text-[#0B0B0B] font-normal font-Cinzel leading-[65px] text-left pl-20">Studio</h1>
 
         </div>
-      </main>
+      </motion.div>
       <hr />
     </section>
 
+    <div id="projects" ref={ref} />
     {/*Recent projects section  */}
-    <section>
+    <section ref={downref}>
       <main className="flex mt-[97px] h-[1350px] ml-9 mr-32 relative">
       <h3 className="w-[244px] h-[29px]text-[#0B0B0B] text-[24px] leading-[29px] font-medium">/RECENT PROJECTS</h3>
     {/* Display projects container */}
-      <div className="relative">
+      <motion.div 
+            initial={{
+              x:-200,
+              opacity:0,
+              scale:0.5
+            }}
+            whileInView={{
+              x:0,
+              opacity:1,
+              scale:1
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{once:true}}
+      className="relative ">
         
         <div >
-        <MiniProjectCard img={mini3} myText='Rahisi Travel App Case Study'/>
+        <MiniProjectCard img={mini3} route='/Rahisi' myText='Rahisi Travel App Case Study'/>
         </div>
         <div className=" absolute top-[210px] left-[550px]">
-        <MiniProjectCard img={mini1} myText='Loho: Defining a new for customized wears.'/>
+        <MiniProjectCard img={mini1} route='/Project' myText='Loho: Defining a new for customized wears.'/>
         </div>
         <div className="absolute top-[700px]">
-        <MiniProjectCard img={mini2} myText='Shoes & Shoes E-commerce Website Case Study.'/>
+        <MiniProjectCard img={mini2} route='/Shoes' myText='Shoes & Shoes E-commerce Website Case Study.'/>
         </div>
 
-      </div>
+      </motion.div>
       </main>
       <hr />
     </section>
    
+  <div id='otherprojects'/>
    {/* Other projects section */}
    <section>
     <main className=" ml-9 mt-[89px]">
       <div className="flex justify-between items-center">
         <h3 className="w-[244px] h-[29px]text-[#0B0B0B] text-[24px] leading-[29px] font-medium">/Other projects</h3>
-        <h3 className="w-[179px] h-[54px] text-[#0B0B0B] text-[40px] leading-[54px] font-normal underline underline-offset-8 font-Cinzel mr-20">View all</h3>
+        <Link href='https://www.figma.com/file/zqYaksW9WCJkIVioGLrfaz/Other-projects-(Extension-of-portfolio)?node-id=0%3A1'>
+        <h3 className="w-[179px] h-[54px] text-[#0B0B0B] text-[40px] leading-[54px] font-normal underline underline-offset-8 font-Cinzel mr-20 cursor-pointer">View all</h3>
+        </Link>
       </div>
 
         <div className="flex justify-between ml-[30px] mt-[64px]">
@@ -156,17 +270,17 @@ export default function Home() {
 
     {/* Contact me section */}
     <section>
-      <main className="flex gap-32 items-center h-[20px] ml-9 mb-60 mt-[97px]">
+      <main className="flex gap-32 items-center h-[20px] ml-9 mb-20 mt-[97px]">
       <h3 className="w-[244px] h-[29px]text-[#0B0B0B] text-[24px] leading-[29px] font-medium font-Montserrat">/CONTACT ME</h3>
       <h1 className="text-[48px] text-[#0B0B0B] leading-[75px] font-medium w-[1047px] h-[75px] font-Montserrat ">NATHANUMARJAMIL@GMAIL.COM</h1>
       </main>
       <hr />
-      <div className="h-[150px]">
+      {/* <div className="h-[150px]">
         <hr />
-      </div>
-      <div className="mb-[129px]">
+      </div> */}
+      {/* <div className="mb-[129px]">
         <hr />
-      </div>
+      </div> */}
     </section>
 
     

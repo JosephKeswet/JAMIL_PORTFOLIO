@@ -24,12 +24,36 @@ import SolutionSect from '../components/SolutionSect'
 import Solution1 from '../components/Solution1'
 import Image from 'next/image'
 import SmallNav from '../components/SmallNav'
+import {motion} from 'framer-motion'
+import Link from 'next/link'
+
 
 const Shoes = () => {
   return (
-    <div>
-        <SmallNav />
+    <motion.div
+    exit={{
+      opacity: 0
+    }}
+    >
+        <SmallNav route='/#projects' />
         <hr />
+      <motion.div
+             initial='hidden' animate='visible'
+             variants={{
+               hidden: {
+                 scale: .8,
+                 opacity: 0
+               },
+               visible: {
+                 scale: 1,
+                 opacity: 1,
+                 transition: {
+                   delay: 1
+                 }
+               },
+             }}
+             className="mt-[150px] overflow-hidden"
+      >
         <SingleProject 
         title="Shoes & Shoes"
         img={Shoe} marginPro="mt-24" 
@@ -116,11 +140,14 @@ const Shoes = () => {
       </section>
     {/*Links to other projects  */}
       <div className='flex justify-center items-center h-[187px] mb-36'>
-        <h1 className='text-[#0B0B0B] text-[30px] leading-[37px] font-Montserrat font-medium underline underline-offset-2'>VIEW OTHER PROJECTS</h1>
+      <Link href='/#otherprojects'>
+        <h1 className='text-[#0B0B0B] text-[30px] leading-[37px] font-Montserrat font-medium underline underline-offset-2 cursor-pointer'>VIEW OTHER PROJECTS</h1>
+        </Link>
       </div>
       
 
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

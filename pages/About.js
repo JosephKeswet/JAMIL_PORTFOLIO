@@ -5,13 +5,33 @@ import Jamil from '../Assets/img/Jamil/JamilRounded.png'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div>
-        <SmallNav/>
+    <motion.div
+    exit={{
+        opacity: 0
+      }}
+    >
+        <SmallNav route='/'/>
         
-        <section className='relative flex items-start mt-32 mx-[100px]'>
+        <motion.div
+        initial='hidden' animate='visible'
+        variants={{
+          hidden: {
+            scale: .8,
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 1
+            }
+          },
+        }}
+        className='relative flex items-start mt-48 mx-[100px] '>
             <main>
             <div className='mb-24 w-[878px]'>
                 <h1 className='font-Cinzel text-[50px] font-light leading-[81px] text-[#2D2D2D] mb-[40px]'>Hey, I’m Nathan Jamil Umar,</h1>
@@ -77,11 +97,11 @@ const About = () => {
                 </div>
             </div>
             </main>
-            <div className='absolute left-[880px] z-20 bottom-[1550px]'>
+            <div className='absolute left-[880px] z-20 top-[-60px]'>
             <Image src={Jamil}/>
             </div>
-        </section>
-    </div>
+        </motion.div>
+    </motion.div>
   )
 }
 

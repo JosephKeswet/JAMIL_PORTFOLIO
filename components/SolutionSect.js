@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Loho from '../Assets/img/single/Loho.svg'
+import { motion } from 'framer-motion'
 
 
 const SolutionSect = ({img1,img2,paddingTop,text1,text2,header,imgWidth,imgHeight}) => {
@@ -19,8 +20,42 @@ const SolutionSect = ({img1,img2,paddingTop,text1,text2,header,imgWidth,imgHeigh
             </div>
         </main>
         <div className='flex justify-center gap-40'>
+            <motion.div
+                initial={{
+                    x:-500,
+                    opacity:0,
+                    scale:0.5
+                  }}
+                  whileInView={{
+                    x:0,
+                    opacity:1,
+                    scale:1
+                  }}
+                  transition={{
+                    duration: 1.3
+                  }}
+                  viewport={{once:true}}
+            >
             <Image src={img1} width={imgWidth} height={imgHeight} alt="Solution design "   />
+            </motion.div>
+            <motion.div
+                initial={{
+                    x:500,
+                    opacity:0,
+                    scale:0.5
+                  }}
+                  whileInView={{
+                    x:0,
+                    opacity:1,
+                    scale:1
+                  }}
+                  transition={{
+                    duration: 1.3
+                  }}
+                  viewport={{once:true}}
+            >
             <Image src={img2} width={imgWidth} height={imgHeight} alt="SOlution design "   />
+            </motion.div>
         </div>
     </div>
   )
