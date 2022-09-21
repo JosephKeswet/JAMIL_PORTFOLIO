@@ -83,8 +83,8 @@ const Rahisi = () => {
           <h2 className='text-[#0B0B0B] text-[28px] leading-[37px] font-Montserrat font-medium'>LOW FIDELITY WIREFRAME</h2>
 
           <div className='flex justify-center gap-32 items-center mt-[100px]'>
-            <Image src={Low1} width={375} height={812}/>
-            <Image src={Low2} width={375} height={812}/>
+            <Image src={Low1} width={375} height={812} alt='Design'/>
+            <Image src={Low2} width={375} height={812} alt='Design'/>
           </div>
           </main>
           </section>
@@ -96,14 +96,14 @@ const Rahisi = () => {
           <p className='text-[#0B0B0B] text-[23px] leading-[29px]  font-light'>During the mid-fidelity wireframe stage, I made slight changes to the initial designs.</p>
 
           <div className='flex flex-wrap mt-20  gap-20'>
-            <Image src={Mid1} width={375} height={812}/>
-            <Image src={Mid2} width={375} height={812}/>
-            <Image src={Mid3} width={375} height={812}/>
-            <Image src={Mid4} width={375} height={812}/>
-            <Image src={Mid5} width={375} height={812}/>
-            <Image src={Mid6} width={375} height={812}/>
+            <Image src={Mid1} width={375} height={812} alt='Design'/>
+            <Image src={Mid2} width={375} height={812} alt='Design'/>
+            <Image src={Mid3} width={375} height={812} alt='Design'/>
+            <Image src={Mid4} width={375} height={812} alt='Design'/>
+            <Image src={Mid5} width={375} height={812} alt='Design'/>
+            <Image src={Mid6} width={375} height={812} alt='Design'/>
             <div className='pl-[460px]'>
-              <Image src={Mid7} width={375} height={812}/>
+              <Image src={Mid7} width={375} height={812} alt='Design'/>
             </div>
           </div>
           </main>
