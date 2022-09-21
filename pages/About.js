@@ -34,8 +34,8 @@ const About = () => {
         className='relative flex items-start mt-48 mx-[100px] '>
             <main>
             <div className='mb-24 w-[878px]'>
-                <h1 className='font-Cinzel text-[50px] font-light leading-[81px] text-[#2D2D2D] mb-[40px]'>Hey, I’m Nathan Jamil Umar,</h1>
-                <p className='font-Montserrat font-light text-[24px] text-[#171717] leading-[29px] w-[778px] h-[58px]'>I'm a Nigerian based UX/UI Designer and Graphic Designer passionate about creating beautiful, meaningful and seamless experiences.</p>
+                <h1 className='font-Cinzel text-[50px] font-light leading-[81px] text-[#2D2D2D] mb-[40px]'>{`Hey, I'm Nathan Jamil Umar,`}</h1>
+                <p className='font-Montserrat font-light text-[24px] text-[#171717] leading-[29px] w-[778px] h-[58px]'>{`I'm a Nigerian based UX/UI Designer and Graphic Designer passionate about creating beautiful, meaningful and seamless experiences.`}</p>
             </div>
             
             <div className='w-[893px] mb-[50px]'>
@@ -50,10 +50,10 @@ const About = () => {
                 After months of learning UI/UX on my own I am now seeking the opportunity to advance my career as a UX/UI Designer and have a primary focus on utilising my skills to create meaningful and seamless experiences. </p>
                 <br />
                 <p className='text-2xl text-[#2D2D2D] font-Montserrat leading-[29px]'>
-                When I'm not designing, I’m voluntering to tech design at a hub in the city where I live.
+                {`When I'm not designing, I’m voluntering to tech design at a hub in the city where I live.`}
 ​                </p>
                 <br />
-                <p className='text-2xl text-[#2D2D2D] font-Montserrat leading-[29px]'>Outside of this, I like to spend time enjoying art in all forms, whether it's paintings, (re)watching TV series and films, listening to music or creating music when I get the opportunity to.</p>
+                <p className='text-2xl text-[#2D2D2D] font-Montserrat leading-[29px]'>{`Outside of this, I like to spend time enjoying art in all forms, whether it's paintings, (re)watching TV series and films, listening to music or creating music when I get the opportunity to.`}</p>
             </div>
 
             <div className='mb-[50px]'>
@@ -98,7 +98,7 @@ const About = () => {
             </div>
             </main>
             <div className='absolute left-[880px] z-20 top-[-60px]'>
-            <Image src={Jamil}/>
+            <Image src={Jamil} alt="Jamil"/>
             </div>
         </motion.div>
     </motion.div>
