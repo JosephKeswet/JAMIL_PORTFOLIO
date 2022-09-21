@@ -1,15 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import LohoFlow from '../Assets/img/flowcharts/LohoFlow.svg'
 import LohoWire1 from '../Assets/img/wireframes/LohoWire1.svg'
 
-const SingleProject = ({title,summary,img,marginPro,marginBottomPro,problem1,problem2,project1,project2,project3,outcome, projectDur,gapPro,widthPro,flowChart}) => {
+const SingleProject = ({title,summary,img,marginPro,marginBottomPro,problem1,problem2,project1,project2,project3,outcome, projectDur,gapPro,widthPro,flowChart,route}) => {
   return (
     <div className='mx-[60px]'>
         <main >
             {/* Summary sectiom */}
             <section className='w-[800px] pl-9 h-[503px] '>
-                <h1 className='text-[#000000] text-[90px] font-normal leading-[121px] font-Cinzel pb-11 '>{title}</h1>
+                <h1 className='text-[#000000] text-[90px] font-normal leading-[121px] font-Cinzel pb-11  '>{title}</h1>
+        
                 <div className='mb-[40px]'>
                     <h2 className='text-[48px] text-[#2D2D2D] leading-[59px] font-medium mb-[15px] font-Montserrat '>SUMMARY</h2>
                     <p className='text-[24px] text-[#2D2D2D] leading-[29px] font-light font-Montserrat'>{summary}</p>
@@ -29,7 +31,9 @@ const SingleProject = ({title,summary,img,marginPro,marginBottomPro,problem1,pro
                 </div>
 
                 <div className={`w-[500px] h-[905px] ${marginPro}`}>
-                    <h1 className='mt-[30px] text-[#000000] text-[48px] leading-[59px] font-medium underline underline-offset-[12px] font-Montserrat'>TEST PROTOTYPE</h1>
+                <Link href={route}>
+                    <h1 className='mt-[30px] text-[#000000] text-[48px] leading-[59px] font-medium underline underline-offset-[12px] font-Montserrat cursor-pointer'>TEST PROTOTYPE</h1>
+                    </Link>
 
                     <div className={`${widthPro} mt-[49px] h-[225px] ${marginBottomPro}`}>
                         <h1 className='text-[#000000] text-[30px] leading-[37px] font-medium mb-[14px] font-Montserrat '>PROBLEM</h1>

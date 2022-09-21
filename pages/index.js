@@ -47,6 +47,8 @@ export default function Home() {
   };
   return (
     <div >
+
+
      <div ref={upref}/>
      <Nav scrollFunc={handleClick} />
      <FontAwesomeIcon icon={scroll ? faArrowDown : faArrowUp} onClick={handleScroll} className='fixed w-20 h-20 left-[1400px] cursor-pointer top-[650px] z-50'/>

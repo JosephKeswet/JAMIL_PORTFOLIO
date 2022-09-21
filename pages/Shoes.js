@@ -56,6 +56,7 @@ const Shoes = () => {
       >
         <SingleProject 
         title="Shoes & Shoes"
+        route="https://www.behance.net/gallery/145354221/Shoes-Shoes-Desktop-Site"
         img={Shoe} marginPro="mt-24" 
         problem1="Designing the an e-commerce platform for desktop as a case study for desktop site layouts."
         // problem2=""

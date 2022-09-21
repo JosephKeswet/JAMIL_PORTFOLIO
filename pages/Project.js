@@ -55,6 +55,7 @@ const Project = () => {
         >
         <SingleProject 
         title="Loho"
+        route="https://www.behance.net/gallery/145245021/Loho-Tailor-App"
         img={Loho} marginPro='mt-12' problem1="People experience many issues with tailors ranging from having missing fabric to late delivery and the likes, therefore people need a way to ensure they get flawless services from tailors." problem2="For individuals that have experienced issues with their tailors  and require an app that serves as an assurance for flawless service delivery." 
         project1='Create an app that aims to eliminate poor service associated with tailors and allows tailors to reach out to more clients.'
         project2='Propose a user journey that allows a user navigate the app seamlessly with little or no help and persuades one to patronize more than usual the tailors in their local community.'

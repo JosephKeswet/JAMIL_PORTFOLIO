@@ -60,6 +60,7 @@ const Rahisi = () => {
         >
         <SingleProject
                 title="Rahisi"
+                route="https://www.behance.net/gallery/145276235/Rahisi-Travel-App"
                 img={RahisiHome} marginPro="mt-0" 
                 problem1="Designing the an air travel app for mobile as a case study for prototyping"
                 // problem2=""
